@@ -1,0 +1,428 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    /* height: 100vh;
+    width: 100%;
+    background-image:url("https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg") ;
+     background-size: contain;
+    background-position: center; */
+    /* backdrop-filter:brightness(80%); */
+    color: #fff;
+}
+.dark-theme {
+    background-color: black;
+    color: white!important;
+}
+
+.light-theme {
+    background-color: white;
+    color: black!important;
+}
+header{
+    height: 10vh;
+    width: 100%;
+    /* background-color: rgb(15,15,15); */
+    padding: 15px;
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.left{
+    display: flex;
+    gap: 28px;
+}
+.left div i{
+    color: #fff;
+    font-size: 1.5rem;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -7px;
+}
+.left div i:hover{
+    background-color: rgb(68, 68, 68);
+}
+.left div a{
+    gap: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding-top:5px ;
+}
+.left div img{
+    height: 30px;
+    width: 30px;
+}
+.left div h2{
+    font: 1.5rem;
+    color: #fff;
+}
+.left div h2 sup{
+    color: #808080;
+    font-size: .9rem;
+}
+.center{
+    display: flex;
+    gap: 20px;
+}
+.center input{
+    width: 37vw;
+    padding: 10px;
+    border-radius: 30px 0 0 30px;
+    border: 1px solid rgb(68, 66, 66);
+    font-size: 1.2rem;
+    background-color: transparent;
+    color: #fff;
+}
+
+.center input::placeholder{
+    font-size: 1.3rem;
+}
+
+.center input:focus{
+    outline: none;
+    border: 1px solid rgb(23, 35, 192);
+    /* border-color: 1px solid red(2, 2, 20); */
+}
+.center div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.center div>i{
+    background-color: rgb(68, 66, 66);
+    padding: 9px 25px;
+    font-size: 1.3rem;
+    border-radius:0 30px 30px 0 ;
+    color: #fff;
+    border:1px solid grey;
+    border-left: none;
+}
+.center>i{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: rgb(39, 39, 39);
+    color: #fff;
+    display:flex ;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+}
+
+.right{
+    display: flex;
+    gap: 15px;
+}
+.right i, .right img{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    /* background-color: #fff; */
+    display:flex ;
+    align-items: center;
+    justify-content: center;
+}
+.right i{
+    font-size: 1.4rem;
+    color: #fff;
+}
+.right .video-details{
+display: flex;
+position: relative;
+}
+.right .bi-camera-video-fill{
+    display: none;
+}
+.right #video{
+    height: 15vh;
+    width: 12vw;
+    background-color: rgb(40, 40, 40);
+    position:absolute;
+    margin-top: 40px;
+    border-radius: 10px;
+    display: none;
+    z-index: 1;
+}
+.right #video a{
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    padding: 7px;
+    text-decoration: none;
+    color: #fff;
+}
+.right #video img{
+    height: 30px;
+    width: 30px;
+}
+.right .notification-details{
+    display: flex;
+    position: relative;
+    z-index: 1;
+}
+.right .bi-bell-fill{
+    display: none;
+}
+.right .notification-details #notification{
+    height: 98vh;
+    width: 36vw;
+    background-color: rgb(40, 40, 40);
+    position: absolute;
+    margin-left: -485px;
+    border-radius: 20px;
+    display: none;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.right .notification-details #notification .notification-header{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    /* color: #fff; */
+    border-bottom: 1px solid #808080;
+}
+.notification-header p{
+    font-size: 1.2rem;
+}
+.notification-header img{
+    height: 30px;
+    width: 30px;
+}
+
+.notification-content>div{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.notification-content>div:hover{
+    background-color: rgb(68, 68, 68);
+}
+
+.notification-content>div img{
+    height: 55px;
+    width: 55px;
+}
+.notification-content>div div p{
+    width:270px;
+    height: auto;
+    text-align: justify;
+    padding:0 10px 10px 10px;
+    /* color: #fff; */
+    word-wrap: break-word;
+}
+.notification-content>div div p:nth-child(2n){
+    color: #808080;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+.notification-content>div .square-img{
+    height: 55px;
+    width: 85px;
+    border-radius: 0;
+}
+.more-icon-container{
+    height: 50px;
+    width: 50px;
+}
+.more-icon-container i{
+    display: none;
+    margin-left: 17px;
+}
+
+
+.right .profile-details{
+    display: flex;
+    position: relative;
+    border-radius: 50%;
+    z-index: 1;
+}
+#profile{
+position: absolute;
+background-color: rgb(40, 40, 40);
+margin-left: -310px;
+border-radius: 10px;
+display:none;
+/* color: #fff; */
+}
+.profile-header{
+    height: 16vh;
+    width: 22vw;
+    padding:10px;
+    display: flex;
+    gap: 10px;
+    border-bottom:1px solid rgb(68, 66, 66) ;
+}
+.profile-header .para p:nth-child(2n){
+    margin-bottom: 10px;
+}
+.profile-header .para a{
+    text-decoration: none;
+    color: rgb(55, 178, 216);
+}
+
+.profile-content{
+    height: 80vh;
+    width: 22vw;
+    border-radius: 20px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.profile-content div{
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+}
+.profile-content div:hover{
+    background-color: rgb(68, 68, 68);
+}
+.profile-content div a{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    padding: 0 10px;
+    margin: 9px 0;
+}
+#switch-container,
+#language-container,
+#location-container,
+#restriction-mode,
+#appearance-container{ 
+    width: 22vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    cursor: pointer;
+}
+#switch-container div,
+#language-container div,
+#location-container div,
+#restriction-mode div,
+    #appearance-container div{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none;
+    /* color: #fff; */
+    font-size: 1rem;
+    padding: 0 10px;
+    margin: 9px 0;
+}
+#appearance-container div img,
+#switch-container div img,
+#language-container div img,
+#location-container div img,
+#restriction-mode div img{
+    height: 25px;
+    width: 25px;
+}
+.profile-content div a img,
+.profile-content div a i{
+    height: 25px;
+    width: 25px;
+}
+.profile-content div img{
+    height: 15px;
+    width: 15px;
+}
+.profile-content .sign_out,
+.profile-content .purchasesMembership, 
+.profile-content .keyboard-shortcut,
+.profile-content .setting{
+    padding-bottom:10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #808080;
+}
+#profile-pages{
+    position: absolute;
+    background-color: rgb(40, 40, 40);
+    margin-left: -260px;
+    margin-top: 40px;
+    border-radius: 10px;
+    /* color: #fff; */
+
+}
+#appearance{
+    height: 29vh;
+    width: 22vw;
+  
+    display: none;
+    flex-direction: column;
+}
+#appearance h4{
+    padding: 15px;
+}
+#appearance .horizontal{
+    width: 22vw;
+    border-bottom: 1px solid #808080;
+    border-top: none;
+    margin-bottom: 15px;
+}
+#appearance small{
+    padding-left: 15px;
+    margin-bottom: 13px;
+}
+#appearance div{
+    display: flex;
+    align-items: center;
+    /* gap: 15px; */
+    border-radius:20px;
+    padding:7px;
+    /* padding-left: 25px; */
+    cursor: pointer;
+}
+#appearance div:hover{
+    background-color: rgb(68, 68, 68);
+}
+
+#appearance div p{
+    margin-left:55px;
+}
+#appearance div img{
+    height: 25px;
+    width: 25px;
+    /* display: none; */
+}
+
+
+
+.right .notification-details #notification::-webkit-scrollbar, 
+.right .profile-details #profile .profile-content::-webkit-scrollbar{
+    width: 10px;
+}
+
+.right .notification-details #notification::-webkit-scrollbar-track,
+.right .profile-details #profile .profile-content::-webkit-scrollbar {
+    box-shadow: inset 0 0 5px grey; 
+}
+.right .notification-details #notification::-webkit-scrollbar-thumb,
+.right .profile-details #profile .profile-content::-webkit-scrollbar {
+    background: rgb(113, 113, 113); 
+}
+
+i:hover ,img:hover{
+    cursor: pointer;
+}
+header .round:hover{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: rgb(68, 68, 68);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
